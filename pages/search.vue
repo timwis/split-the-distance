@@ -3,7 +3,7 @@
     <fieldset>
       <form>
         <b-field label="Your location">
-          <b-input
+          <LocationInput
             v-model="yourLocation"
             name="yourLocation"
             icon="map-marker"
@@ -11,10 +11,10 @@
         </b-field>
 
         <b-field label="Their location">
-          <b-input
+          <LocationInput
             v-model="theirLocation"
-            icon="map-marker"
             name="theirLocation"
+            icon="map-marker"
           />
         </b-field>
 
@@ -64,12 +64,17 @@
 </template>
 
 <script>
+import LocationInput from '@/components/LocationInput'
+
 export default {
   name: 'SearchPage',
+  components: {
+    LocationInput
+  },
   data () {
     return {
-      yourLocation: '',
-      theirLocation: '',
+      yourLocation: {},
+      theirLocation: {},
       travelTime: 45,
       travelMode: 'public_transport',
       travelModes: new Map([

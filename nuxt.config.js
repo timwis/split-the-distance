@@ -39,6 +39,7 @@ export default {
     'nuxt-buefy',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
     'nuxt-leaflet'
   ],
 
@@ -46,6 +47,18 @@ export default {
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/'
+  },
+
+  proxy: {
+    '/traveltime': {
+      target: 'https://api.traveltimeapp.com',
+      pathRewrite: { '^/traveltime': '/v4' },
+      headers: {
+        'Accept-Language': 'en',
+        'X-Application-Id': process.env.TRAVEL_TIME_APP_ID,
+        'X-Api-Key': process.env.TRAVEL_TIME_API_KEY
+      }
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
