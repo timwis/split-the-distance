@@ -1,7 +1,7 @@
 <template>
   <b-autocomplete
     v-bind="$attrs"
-    :value="value.properties && value.properties.name"
+    :value="value && value.properties && value.properties.name"
     :data="features"
     :loading="isLoading"
     field="properties.name"
@@ -23,7 +23,7 @@ export default {
   props: {
     value: {
       type: Object,
-      required: true
+      default: null
     }
   },
   data () {
