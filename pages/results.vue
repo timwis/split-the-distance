@@ -72,11 +72,10 @@ export default {
       this.$nextTick(() => {
         const map = this.$refs.map.mapObject
 
-        const bounds = this.$L.latLngBounds()
-        this.$refs.isochrones.forEach((isochrone) => {
-          bounds.extend(isochrone.mapObject.getBounds())
-        })
-        map.flyToBounds(bounds)
+        const intersection = this.$refs.isochrones.find(isochrone => isochrone.name === 'intersection')
+        if (intersection) {
+          map.fitBounds(intersection.mapObject.getBounds())
+        }
       })
     }
   }
