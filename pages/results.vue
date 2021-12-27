@@ -2,7 +2,7 @@
   <main>
     <client-only>
       <l-map id="map" ref="map" :zoom="zoom" :center="center" @ready="fitBounds">
-        <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png" />
+        <l-tile-layer url="https://{s}.tile.osm.org/{z}/{x}/{y}.png" />
         <l-polygon
           v-for="(timeMap, key, index) in timeMaps"
           ref="isochrones"
