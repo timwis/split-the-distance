@@ -17,6 +17,7 @@
 
 <script>
 import debounce from 'lodash/debounce'
+import { geocode } from '@/lib/travel-time'
 
 export default {
   props: {
@@ -40,11 +41,9 @@ export default {
       }
 
       this.isLoading = true
-      const url = '/traveltime/geocoding/search'
-      const params = { query }
       try {
-        const data = await this.$axios.$get(url, { params })
-        this.features = data.features
+        const response = await this.$axios(geocode(query))
+        this.features = response.data.features
       } catch (error) {
         this.features = []
         throw error

@@ -1,12 +1,13 @@
 <template>
   <main class="container">
     <fieldset>
-      <form>
+      <form @submit.prevent="onSubmit">
         <b-field label="Your location">
           <LocationInput
             v-model="yourLocation"
             name="yourLocation"
             icon="map-marker"
+            required="true"
           />
         </b-field>
 
@@ -15,6 +16,7 @@
             v-model="theirLocation"
             name="theirLocation"
             icon="map-marker"
+            required
           />
         </b-field>
 
@@ -83,6 +85,23 @@ export default {
         ['public_transport', 'Public transport'],
         ['walking', 'Walking']
       ])
+    }
+  },
+  methods: {
+    onSubmit (_event) {
+      const query = {
+        points: [
+          this.yourLocation.geometry.coordinates.join(','),
+          this.theirLocation.geometry.coordinates.join(',')
+        ],
+        labels: [
+          this.yourLocation.properties.name,
+          this.theirLocation.properties.name
+        ],
+        travelTime: this.travelTime,
+        travelMode: this.travelMode
+      }
+      this.$router.push({ path: '/results', query })
     }
   }
 }
