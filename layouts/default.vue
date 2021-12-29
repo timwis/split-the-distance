@@ -3,7 +3,7 @@
     <header>
       <NavBar />
     </header>
-    <Nuxt class="main" keep-alive />
+    <Nuxt class="main" keep-alive :keep-alive-props="{ exclude: ['ResultsPage'] }" />
   </div>
 </template>
 

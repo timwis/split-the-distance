@@ -1,7 +1,7 @@
 <template>
   <main>
     <client-only>
-      <l-map id="map" ref="map" :zoom="zoom" :center="center" @ready="fitBounds">
+      <l-map id="map" ref="map" :zoom="zoom" :center="center">
         <l-tile-layer url="https://{s}.tile.osm.org/{z}/{x}/{y}.png" />
         <l-polygon
           v-for="(timeMap, key, index) in timeMaps"
@@ -12,7 +12,6 @@
           :color="['blue', 'red', 'purple'][index]"
           :name="key"
           :weight="1"
-          @add="fitBounds"
         />
       </l-map>
     </client-only>
@@ -35,36 +34,38 @@ export default {
     ]
 
     return requiredParams.every(param => query[param]) &&
-      validTravelModes.includes(query.travelMode)
+      validTravelModes.includes(query.travelMode) &&
+      query.points.length >= 2
   },
-  data () {
-    return {
-      center: [51.5072, -0.1276],
-      zoom: 12,
-      timeMaps: {}
-    }
-  },
-  async fetch () {
+  async asyncData ({ query, $axios }) {
     const {
       points: pointsStrings,
       labels,
       travelTime,
       travelMode
-    } = this.$route.query
+    } = query
 
     const points = pointsStrings.map(stringToArray)
 
     const request = timeMap({ points, labels, travelMode, travelTime })
-    try {
-      const response = await this.$axios(request)
-      this.timeMaps = response.data.results.reduce((accum, isochrone) => {
-        accum[isochrone.search_id] = isochroneToPolygon(isochrone)
-        return accum
-      }, {})
-      this.fitBounds()
-    } catch (err) {
-      console.error(err)
+    const response = await $axios(request)
+
+    const timeMaps = response.data.results.reduce((accum, isochrone) => {
+      accum[isochrone.search_id] = isochroneToPolygon(isochrone)
+      return accum
+    }, {})
+    return { timeMaps }
+  },
+  data () {
+    return {
+      center: stringToArray(this.$route.query.points[0]).reverse(), // lat,lng for leaflet
+      zoom: 12,
+      timeMaps: {}
     }
+  },
+  watchQuery: ['points', 'travelTime', 'travelMode'],
+  mounted () {
+    this.fitBounds()
   },
   methods: {
     fitBounds () {
@@ -74,7 +75,7 @@ export default {
 
         const intersection = this.$refs.isochrones.find(isochrone => isochrone.name === 'intersection')
         if (intersection) {
-          map.fitBounds(intersection.mapObject.getBounds())
+          map.flyToBounds(intersection.mapObject.getBounds())
         }
       })
     }
