@@ -1,7 +1,14 @@
 <template>
   <main>
     <client-only>
-      <l-map id="map" ref="map" :zoom="zoom" :center="center">
+      <l-map
+        id="map"
+        ref="map"
+        :zoom="zoom"
+        :center="center"
+        @ready="fitBounds"
+        @update:bounds="fetchPlaces"
+      >
         <l-tile-layer url="https://{s}.tile.osm.org/{z}/{x}/{y}.png" />
         <l-polygon
           v-for="(timeMap, key, index) in timeMaps"
@@ -13,6 +20,14 @@
           :name="key"
           :weight="1"
         />
+        <l-marker
+          v-for="place in places"
+          :key="place.id"
+          :lat-lng="place.center.slice().reverse()"
+          :name="place.text"
+        >
+          <l-popup>{{ place.place_name }}</l-popup>
+        </l-marker>
       </l-map>
     </client-only>
   </main>
@@ -20,7 +35,7 @@
 
 <script>
 import { timeMap } from '@/lib/travel-time'
-import { stringToArray, isochroneToPolygon } from '@/lib/geometry'
+import { stringToArray, isochroneToPolygon, objectToGeojsonArray } from '@/lib/geometry'
 
 export default {
   name: 'ResultsPage',
@@ -60,24 +75,35 @@ export default {
     return {
       center: stringToArray(this.$route.query.points[0]).reverse(), // lat,lng for leaflet
       zoom: 12,
-      timeMaps: {}
+      timeMaps: {},
+      places: []
     }
   },
   watchQuery: ['points', 'travelTime', 'travelMode'],
-  mounted () {
-    this.fitBounds()
-  },
   methods: {
     fitBounds () {
-      if (process.server || !this.$refs.isochrones) { return }
-      this.$nextTick(() => {
-        const map = this.$refs.map.mapObject
+      const map = this.$refs.map.mapObject
+      const isochroneEls = this.$refs.isochrones
 
-        const intersection = this.$refs.isochrones.find(isochrone => isochrone.name === 'intersection')
-        if (intersection) {
-          map.flyToBounds(intersection.mapObject.getBounds())
-        }
-      })
+      const intersection = isochroneEls.find(isochrone => isochrone.name === 'intersection')
+      if (intersection) {
+        map.fitBounds(intersection.mapObject.getBounds())
+      }
+    },
+    async fetchPlaces () {
+      const map = this.$refs.map.mapObject
+      const bounds = map.getBounds()
+      const bbox = stringToArray(bounds.toBBoxString())
+      const center = objectToGeojsonArray(bounds.getCenter())
+
+      const response = await this.$mapbox.geocoding.forwardGeocode({
+        query: 'coffee',
+        limit: 10,
+        types: ['poi'],
+        proximity: center,
+        bbox
+      }).send()
+      this.places = response.body.features
     }
   }
 }

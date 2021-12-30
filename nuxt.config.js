@@ -22,6 +22,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/mapbox.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -59,6 +60,10 @@ export default {
         'X-Api-Key': process.env.TRAVEL_TIME_API_KEY
       }
     }
+  },
+
+  publicRuntimeConfig: {
+    mapboxApiKey: process.env.MAPBOX_API_KEY
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
