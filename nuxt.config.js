@@ -22,7 +22,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/mapbox.js'
+    '~/plugins/foursquare.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -58,6 +58,13 @@ export default {
         'Accept-Language': 'en',
         'X-Application-Id': process.env.TRAVEL_TIME_APP_ID,
         'X-Api-Key': process.env.TRAVEL_TIME_API_KEY
+      }
+    },
+    '/foursquare': {
+      target: 'https://api.foursquare.com',
+      pathRewrite: { '^/foursquare': '/v3' },
+      headers: {
+        Authorization: process.env.FOURSQUARE_API_KEY
       }
     }
   },

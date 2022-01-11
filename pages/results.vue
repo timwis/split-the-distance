@@ -22,11 +22,11 @@
         />
         <l-marker
           v-for="place in places"
-          :key="place.id"
-          :lat-lng="place.center.slice().reverse()"
-          :name="place.text"
+          :key="place.fsq_id"
+          :lat-lng="place.geocodes.main | foursquareObjectToLeafletObject"
+          :name="place.name"
         >
-          <l-popup>{{ place.place_name }}</l-popup>
+          <l-popup>{{ place.name }}</l-popup>
         </l-marker>
       </l-map>
     </client-only>
@@ -35,10 +35,11 @@
 
 <script>
 import { timeMap } from '@/lib/travel-time'
-import { stringToArray, isochroneToPolygon, objectToGeojsonArray } from '@/lib/geometry'
+import { stringToArray, isochroneToPolygon, leafletLatLngToString, foursquareObjectToLeafletObject } from '@/lib/geometry'
 
 export default {
   name: 'ResultsPage',
+  filters: { foursquareObjectToLeafletObject },
   validate ({ query }) {
     const validTravelModes = ['cycling', 'driving', 'public_transport', 'walking']
     const requiredParams = [
@@ -93,17 +94,15 @@ export default {
     async fetchPlaces () {
       const map = this.$refs.map.mapObject
       const bounds = map.getBounds()
-      const bbox = stringToArray(bounds.toBBoxString())
-      const center = objectToGeojsonArray(bounds.getCenter())
+      const ne = leafletLatLngToString(bounds.getNorthEast())
+      const sw = leafletLatLngToString(bounds.getSouthWest())
 
-      const response = await this.$mapbox.geocoding.forwardGeocode({
-        query: 'coffee',
-        limit: 10,
-        types: ['poi'],
-        proximity: center,
-        bbox
-      }).send()
-      this.places = response.body.features
+      const data = await this.$foursquare.search({
+        category: 'coffee-shops',
+        ne,
+        sw
+      })
+      this.places = data.results
     }
   }
 }
