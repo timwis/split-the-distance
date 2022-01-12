@@ -42,6 +42,7 @@ export default {
   filters: { foursquareObjectToLeafletObject },
   validate ({ query }) {
     const validTravelModes = ['cycling', 'driving', 'public_transport', 'walking']
+    const validVenueTypes = ['coffee-shops', 'restaurants', 'bars']
     const requiredParams = [
       'points',
       'labels',
@@ -51,6 +52,7 @@ export default {
 
     return requiredParams.every(param => query[param]) &&
       validTravelModes.includes(query.travelMode) &&
+      validVenueTypes.includes(query.venueType) &&
       query.points.length >= 2
   },
   async asyncData ({ query, $axios }) {
@@ -96,12 +98,9 @@ export default {
       const bounds = map.getBounds()
       const ne = leafletLatLngToString(bounds.getNorthEast())
       const sw = leafletLatLngToString(bounds.getSouthWest())
+      const category = this.$route.query.venueType
 
-      const data = await this.$foursquare.search({
-        category: 'coffee-shops',
-        ne,
-        sw
-      })
+      const data = await this.$foursquare.search({ category, ne, sw })
       this.places = data.results
     }
   }

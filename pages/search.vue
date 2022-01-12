@@ -49,6 +49,35 @@
           />
         </b-field>
 
+        <b-field label="Venue type">
+          <b-radio-button
+            v-model="venueType"
+            native-value="coffee-shops"
+            type="is-outlined is-primary is-light"
+          >
+            <b-icon icon="coffee" />
+            <span>Coffee shops</span>
+          </b-radio-button>
+
+          <b-radio-button
+            v-model="venueType"
+            native-value="restaurants"
+            type="is-outlined is-primary is-light"
+          >
+            <b-icon icon="silverware-fork-knife" />
+            <span>Restaurants</span>
+          </b-radio-button>
+
+          <b-radio-button
+            v-model="venueType"
+            native-value="bars"
+            type="is-outlined is-primary is-light"
+          >
+            <b-icon icon="glass-cocktail" />
+            <span>Bars</span>
+          </b-radio-button>
+        </b-field>
+
         <b-field>
           <p class="control">
             <b-button
@@ -84,7 +113,8 @@ export default {
         ['driving', 'Driving'],
         ['public_transport', 'Public transport'],
         ['walking', 'Walking']
-      ])
+      ]),
+      venueType: 'coffee-shops'
     }
   },
   methods: {
@@ -99,7 +129,8 @@ export default {
           this.theirLocation.properties.name
         ],
         travelTime: this.travelTime,
-        travelMode: this.travelMode
+        travelMode: this.travelMode,
+        venueType: this.venueType
       }
       this.$router.push({ path: '/results', query })
     }
