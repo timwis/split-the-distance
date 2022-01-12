@@ -1,23 +1,22 @@
 <template>
   <b-autocomplete
     v-bind="$attrs"
-    :value="value && value.properties && value.properties.name"
+    :value="value && value.text"
     :data="features"
     :loading="isLoading"
-    field="properties.name"
+    field="text"
     keep-first
     @typing="search"
     @select="option => $emit('input', option)"
   >
     <template #default="{ option }">
-      <div>{{ option.properties.name }}</div>
+      <div>{{ option.place_name }}</div>
     </template>
   </b-autocomplete>
 </template>
 
 <script>
 import debounce from 'lodash/debounce'
-import { geocode } from '@/lib/travel-time'
 
 export default {
   props: {
@@ -42,8 +41,13 @@ export default {
 
       this.isLoading = true
       try {
-        const response = await this.$axios(geocode(query))
-        this.features = response.data.features
+        const response = await this.$mapbox.geocoding.forwardGeocode({
+          query,
+          types: ['postcode', 'district', 'place', 'locality', 'neighborhood',
+            'address'],
+          autocomplete: true
+        }).send()
+        this.features = response.body.features
       } catch (error) {
         this.features = []
         throw error

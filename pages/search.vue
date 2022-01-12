@@ -121,12 +121,12 @@ export default {
     onSubmit (_event) {
       const query = {
         points: [
-          this.yourLocation.geometry.coordinates.join(','),
-          this.theirLocation.geometry.coordinates.join(',')
+          this.yourLocation.center.join(','),
+          this.theirLocation.center.join(',')
         ],
         labels: [
-          this.yourLocation.properties.name,
-          this.theirLocation.properties.name
+          this.yourLocation.text,
+          this.theirLocation.text
         ],
         travelTime: this.travelTime,
         travelMode: this.travelMode,
