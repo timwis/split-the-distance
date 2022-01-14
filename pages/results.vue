@@ -34,7 +34,6 @@
 </template>
 
 <script>
-import { timeMap } from '@/lib/travel-time'
 import { stringToArray, isochroneToPolygon, leafletLatLngToString, foursquareObjectToLeafletObject } from '@/lib/geometry'
 
 export default {
@@ -55,7 +54,7 @@ export default {
       validVenueTypes.includes(query.venueType) &&
       query.points.length >= 2
   },
-  async asyncData ({ query, $axios }) {
+  async asyncData ({ query, $travelTime }) {
     const {
       points: pointsStrings,
       labels,
@@ -65,10 +64,9 @@ export default {
 
     const points = pointsStrings.map(stringToArray)
 
-    const request = timeMap({ points, labels, travelMode, travelTime })
-    const response = await $axios(request)
+    const data = await $travelTime.timeMap({ points, labels, travelMode, travelTime })
 
-    const timeMaps = response.data.results.reduce((accum, isochrone) => {
+    const timeMaps = data.results.reduce((accum, isochrone) => {
       accum[isochrone.search_id] = isochroneToPolygon(isochrone)
       return accum
     }, {})
@@ -88,7 +86,7 @@ export default {
       const map = this.$refs.map.mapObject
       const isochroneEls = this.$refs.isochrones
 
-      const intersection = isochroneEls.find(isochrone => isochrone.name === 'intersection')
+      const intersection = isochroneEls?.find(isochrone => isochrone.name === 'intersection')
       if (intersection) {
         map.fitBounds(intersection.mapObject.getBounds())
       }
