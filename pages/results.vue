@@ -6,6 +6,7 @@
         ref="map"
         :zoom="zoom"
         :center="center"
+        :options="{ tap: false }"
         @ready="fitBounds"
         @update:bounds="fetchPlaces"
       >
