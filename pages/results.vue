@@ -87,7 +87,7 @@ export default {
       const map = this.$refs.map.mapObject
       const isochroneEls = this.$refs.isochrones
 
-      const intersection = isochroneEls?.find(isochrone => isochrone.name === 'intersection')
+      const intersection = isochroneEls && isochroneEls.find(isochrone => isochrone.name === 'intersection')
       if (intersection) {
         map.fitBounds(intersection.mapObject.getBounds())
       }
