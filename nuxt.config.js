@@ -42,9 +42,12 @@ export default {
     'nuxt-buefy',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/proxy',
     'nuxt-leaflet'
   ],
+
+  axios: {
+    proxy: true
+  },
 
   proxy: {
     '/traveltime': {
