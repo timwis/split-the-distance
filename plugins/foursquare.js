@@ -11,9 +11,8 @@ class Foursquare {
   }
 
   constructor ($axios) {
-    const currentBaseURL = $axios.defaults.baseURL
     this.client = $axios.create({
-      baseURL: currentBaseURL + 'foursquare/'
+      baseURL: '/foursquare/'
     })
   }
 
