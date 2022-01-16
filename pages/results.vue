@@ -60,12 +60,14 @@ export default {
       points: pointsStrings,
       labels,
       travelTime,
-      travelMode
+      travelMode,
+      departureTime
     } = query
 
     const points = pointsStrings.map(stringToArray)
 
-    const data = await $travelTime.timeMap({ points, labels, travelMode, travelTime })
+    const opts = { points, labels, travelMode, travelTime, departureTime }
+    const data = await $travelTime.timeMap(opts)
 
     const timeMaps = data.results.reduce((accum, isochrone) => {
       accum[isochrone.search_id] = isochroneToPolygon(isochrone)

@@ -78,6 +78,23 @@
           </b-radio-button>
         </b-field>
 
+        <b-field label="Leaving at">
+          <b-datetimepicker
+            v-model="departureTime"
+            placeholder="Select a date and time"
+            icon="calendar-today"
+          >
+            <template #left>
+              <b-button
+                label="Now"
+                type="is-primary"
+                icon-left="clock"
+                @click="departureTime = new Date()"
+              />
+            </template>
+          </b-datetimepicker>
+        </b-field>
+
         <b-field>
           <p class="control">
             <b-button
@@ -114,7 +131,8 @@ export default {
         ['public_transport', 'Public transport'],
         ['walking', 'Walking']
       ]),
-      venueType: 'coffee-shops'
+      venueType: 'coffee-shops',
+      departureTime: new Date()
     }
   },
   methods: {
@@ -130,7 +148,8 @@ export default {
         ],
         travelTime: this.travelTime,
         travelMode: this.travelMode,
-        venueType: this.venueType
+        venueType: this.venueType,
+        departureTime: this.departureTime.toISOString()
       }
       this.$router.push({ path: '/results', query })
     }
