@@ -61,12 +61,12 @@ export default {
       labels,
       travelTime,
       travelMode,
-      departureTime
+      arrivalTime
     } = query
 
     const points = pointsStrings.map(stringToArray)
 
-    const opts = { points, labels, travelMode, travelTime, departureTime }
+    const opts = { points, labels, travelMode, travelTime, arrivalTime }
     const data = await $travelTime.timeMap(opts)
 
     const timeMaps = data.results.reduce((accum, isochrone) => {

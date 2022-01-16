@@ -78,18 +78,19 @@
           </b-radio-button>
         </b-field>
 
-        <b-field label="Leaving at">
+        <b-field label="Meeting at">
           <b-datetimepicker
-            v-model="departureTime"
+            v-model="arrivalTime"
             placeholder="Select a date and time"
             icon="calendar-today"
+            :timepicker="{ incrementMinutes: 15 }"
           >
             <template #left>
               <b-button
                 label="Now"
                 type="is-primary"
                 icon-left="clock"
-                @click="departureTime = new Date()"
+                @click="arrivalTime = new Date()"
               />
             </template>
           </b-datetimepicker>
@@ -112,6 +113,7 @@
 </template>
 
 <script>
+import { add, roundToNearestMinutes } from 'date-fns'
 import LocationInput from '@/components/LocationInput'
 
 export default {
@@ -132,7 +134,7 @@ export default {
         ['walking', 'Walking']
       ]),
       venueType: 'coffee-shops',
-      departureTime: new Date()
+      arrivalTime: roundToNearestMinutes(add(new Date(), { hours: 1 }), { nearestTo: 15 })
     }
   },
   methods: {
@@ -149,7 +151,7 @@ export default {
         travelTime: this.travelTime,
         travelMode: this.travelMode,
         venueType: this.venueType,
-        departureTime: this.departureTime.toISOString()
+        arrivalTime: this.arrivalTime.toISOString()
       }
       this.$router.push({ path: '/results', query })
     }

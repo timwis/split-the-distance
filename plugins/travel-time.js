@@ -18,17 +18,17 @@ class TravelTime {
     return this.client.$get('/geocoding/search', { params })
   }
 
-  timeMap ({ points, labels, travelMode, travelTime, departureTime = (new Date()).toISOString() }) {
+  timeMap ({ points, labels, travelMode, travelTime, arrivalTime = (new Date()).toISOString() }) {
     if (process.env.NUXT_ENV_STUB_TRAVEL_TIME) {
       return this.client.$get('/time-map.json')
     }
 
     const data = {
-      departure_searches: points.map((point, index) => ({
+      arrival_searches: points.map((point, index) => ({
         id: labels[index] || `isochrone-${index}`,
         coords: geojsonArrayToObject(point),
         transportation: { type: travelMode },
-        departure_time: departureTime,
+        arrival_time: arrivalTime,
         travel_time: travelTime * 60
       })),
       intersections: [
