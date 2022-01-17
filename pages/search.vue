@@ -8,6 +8,7 @@
             name="yourLocation"
             icon="map-marker"
             required="true"
+            data-testid="yourLocation"
           />
         </b-field>
 
@@ -17,6 +18,7 @@
             name="theirLocation"
             icon="map-marker"
             required
+            data-testid="theirLocation"
           />
         </b-field>
 
@@ -25,6 +27,7 @@
             v-model="travelMode"
             placeholder="Select a travel mode"
             name="travelMode"
+            data-testid="travelMode"
             expanded
           >
             <option
@@ -46,6 +49,7 @@
             aria-minus-label="Decrement by 5"
             aria-plus-label="Increment by 5"
             name="travelTime"
+            data-testid="travelTime"
           />
         </b-field>
 
@@ -103,6 +107,7 @@
               native-type="submit"
               value="Search"
               type="is-primary"
+              data-testid="search-btn"
               expanded
             />
           </p>
