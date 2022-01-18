@@ -1,0 +1,266 @@
+{
+  "type": "FeatureCollection",
+  "query": [
+    "n1"
+  ],
+  "features": [
+    {
+      "id": "postcode.4437961898004150",
+      "type": "Feature",
+      "place_type": [
+        "postcode"
+      ],
+      "relevance": 1,
+      "properties": {},
+      "text": "N1 9AF",
+      "place_name": "N1 9AF, London, Greater London, England, United Kingdom",
+      "bbox": [
+        -0.122535,
+        51.530745,
+        -0.121844,
+        51.531153
+      ],
+      "center": [
+        -0.1219832,
+        51.5310196
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1219832,
+          51.5310196
+        ]
+      },
+      "context": [
+        {
+          "id": "locality.11966869587342920",
+          "text": "Islington"
+        },
+        {
+          "id": "place.8780954591631530",
+          "wikidata": "Q84",
+          "text": "London"
+        },
+        {
+          "id": "district.16748366688976620",
+          "wikidata": "Q23306",
+          "text": "Greater London"
+        },
+        {
+          "id": "region.13483278848453920",
+          "wikidata": "Q21",
+          "short_code": "GB-ENG",
+          "text": "England"
+        },
+        {
+          "id": "country.12405201072814600",
+          "wikidata": "Q145",
+          "short_code": "gb",
+          "text": "United Kingdom"
+        }
+      ]
+    },
+    {
+      "id": "neighborhood.13045951074345430",
+      "type": "Feature",
+      "place_type": [
+        "neighborhood"
+      ],
+      "relevance": 1,
+      "properties": {},
+      "text": "N1 City",
+      "place_name": "N1 City, 7460, Goodwood, Western Cape, South Africa",
+      "bbox": [
+        18.553382964,
+        -33.895805,
+        18.566447494,
+        -33.888551075
+      ],
+      "center": [
+        18.56,
+        -33.89
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.56,
+          -33.89
+        ]
+      },
+      "context": [
+        {
+          "id": "postcode.12848409778543760",
+          "text": "7460"
+        },
+        {
+          "id": "place.12000327212414210",
+          "wikidata": "Q5583705",
+          "text": "Goodwood"
+        },
+        {
+          "id": "region.12921471405457140",
+          "wikidata": "Q127167",
+          "short_code": "ZA-WC",
+          "text": "Western Cape"
+        },
+        {
+          "id": "country.13290890257841840",
+          "wikidata": "Q258",
+          "short_code": "za",
+          "text": "South Africa"
+        }
+      ]
+    },
+    {
+      "id": "postcode.3148899933789240",
+      "type": "Feature",
+      "place_type": [
+        "postcode"
+      ],
+      "relevance": 1,
+      "properties": {},
+      "text": "N1 9GE",
+      "place_name": "N1 9GE, London, Greater London, England, United Kingdom",
+      "center": [
+        -0.1215744,
+        51.5349967
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1215744,
+          51.5349967
+        ]
+      },
+      "context": [
+        {
+          "id": "locality.11966869587342920",
+          "text": "Islington"
+        },
+        {
+          "id": "place.8780954591631530",
+          "wikidata": "Q84",
+          "text": "London"
+        },
+        {
+          "id": "district.16748366688976620",
+          "wikidata": "Q23306",
+          "text": "Greater London"
+        },
+        {
+          "id": "region.13483278848453920",
+          "wikidata": "Q21",
+          "short_code": "GB-ENG",
+          "text": "England"
+        },
+        {
+          "id": "country.12405201072814600",
+          "wikidata": "Q145",
+          "short_code": "gb",
+          "text": "United Kingdom"
+        }
+      ]
+    },
+    {
+      "id": "postcode.11067461504896160",
+      "type": "Feature",
+      "place_type": [
+        "postcode"
+      ],
+      "relevance": 1,
+      "properties": {},
+      "text": "N1 8XL",
+      "place_name": "N1 8XL, London, Greater London, England, United Kingdom",
+      "center": [
+        -0.1055337,
+        51.5330752
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1055337,
+          51.5330752
+        ]
+      },
+      "context": [
+        {
+          "id": "locality.11966869587342920",
+          "text": "Islington"
+        },
+        {
+          "id": "place.8780954591631530",
+          "wikidata": "Q84",
+          "text": "London"
+        },
+        {
+          "id": "district.16748366688976620",
+          "wikidata": "Q23306",
+          "text": "Greater London"
+        },
+        {
+          "id": "region.13483278848453920",
+          "wikidata": "Q21",
+          "short_code": "GB-ENG",
+          "text": "England"
+        },
+        {
+          "id": "country.12405201072814600",
+          "wikidata": "Q145",
+          "short_code": "gb",
+          "text": "United Kingdom"
+        }
+      ]
+    },
+    {
+      "id": "postcode.11067461504332930",
+      "type": "Feature",
+      "place_type": [
+        "postcode"
+      ],
+      "relevance": 1,
+      "properties": {},
+      "text": "N1 8EQ",
+      "place_name": "N1 8EQ, London, Greater London, England, United Kingdom",
+      "center": [
+        -0.1055337,
+        51.5330752
+      ],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1055337,
+          51.5330752
+        ]
+      },
+      "context": [
+        {
+          "id": "locality.11966869587342920",
+          "text": "Islington"
+        },
+        {
+          "id": "place.8780954591631530",
+          "wikidata": "Q84",
+          "text": "London"
+        },
+        {
+          "id": "district.16748366688976620",
+          "wikidata": "Q23306",
+          "text": "Greater London"
+        },
+        {
+          "id": "region.13483278848453920",
+          "wikidata": "Q21",
+          "short_code": "GB-ENG",
+          "text": "England"
+        },
+        {
+          "id": "country.12405201072814600",
+          "wikidata": "Q145",
+          "short_code": "gb",
+          "text": "United Kingdom"
+        }
+      ]
+    }
+  ],
+  "attribution": "NOTICE: © 2021 Mapbox and its suppliers. All rights reserved. Use of this data is subject to the Mapbox Terms of Service (https://www.mapbox.com/about/maps/). This response and the information it contains may not be retained. POI(s) provided by Foursquare."
+}

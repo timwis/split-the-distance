@@ -1,0 +1,2395 @@
+{
+  "results": [
+    {
+      "fsq_id": "5555d73f498eba1d92b0bd0a",
+      "categories": [
+        {
+          "id": 13002,
+          "name": "Bakery",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/bakery_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 581,
+      "geocodes": {
+        "main": {
+          "latitude": 51.526369,
+          "longitude": -0.108318
+        }
+      },
+      "location": {
+        "address": "67 Exmouth Market",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "Tysoe St",
+        "locality": "London",
+        "neighborhood": [
+          "Clerkenwell"
+        ],
+        "post_town": "London",
+        "postcode": "EC1R 4QL",
+        "region": "Greater London"
+      },
+      "name": "Briki",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "54293665498e82f0e3cc82ea",
+      "categories": [
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 344,
+      "geocodes": {
+        "main": {
+          "latitude": 51.53191883247756,
+          "longitude": -0.10756547340111304
+        }
+      },
+      "location": {
+        "address": "4 Angel House 20-32 Pentonville Rd",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "Angel House",
+        "locality": "London",
+        "neighborhood": [
+          "Islington"
+        ],
+        "post_town": "London",
+        "postcode": "N1 9HJ",
+        "region": "Greater London"
+      },
+      "name": "Saint Espressō",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "5bd31c52acc5f5002ca7905d",
+      "categories": [
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 1076,
+      "geocodes": {
+        "main": {
+          "latitude": 51.53578653699008,
+          "longitude": -0.12583099556592692
+        }
+      },
+      "location": {
+        "address": "Stable St",
+        "address_extended": "Unit 109",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "Lower Stable St",
+        "locality": "King's Cross",
+        "post_town": "London",
+        "postcode": "N1C 4AQ",
+        "region": "Greater London"
+      },
+      "name": "Redemption Roasters",
+      "related_places": {
+        "parent": {
+          "fsq_id": "571897f5498e9ddf8fd2bcd4",
+          "name": "Coal Drops Yard"
+        }
+      },
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "5e4bc0e48cc54e0007f26700",
+      "categories": [
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 1040,
+      "geocodes": {
+        "main": {
+          "latitude": 51.538675,
+          "longitude": -0.103751
+        }
+      },
+      "location": {
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "London",
+        "post_town": "London",
+        "postcode": "N1 1QP",
+        "region": "Greater London"
+      },
+      "name": "Megan's at the Sorting Office",
+      "related_places": {
+        "parent": {
+          "fsq_id": "5db2995785b2a50007a92ffc",
+          "name": "Islington Square"
+        }
+      },
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4d5d33e3fb186dcb4030099b",
+      "categories": [
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 1243,
+      "geocodes": {
+        "main": {
+          "latitude": 51.51992634,
+          "longitude": -0.10945263
+        }
+      },
+      "location": {
+        "address": "23-25 Leather Lane",
+        "admin_region": "England",
+        "country": "GB",
+        "locality": "London",
+        "neighborhood": [
+          "Central"
+        ],
+        "post_town": "London",
+        "postcode": "EC1N 7TE",
+        "region": "Greater London"
+      },
+      "name": "Prufrock Coffee",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4ad5ef05f964a5200a0421e3",
+      "categories": [
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 1396,
+      "geocodes": {
+        "main": {
+          "latitude": 51.52177463018556,
+          "longitude": -0.1260657566622182
+        }
+      },
+      "location": {
+        "address": "Russell Square",
+        "address_extended": "Flat 8",
+        "admin_region": "England",
+        "country": "GB",
+        "locality": "London",
+        "neighborhood": [
+          "Bloomsbury"
+        ],
+        "post_town": "London",
+        "postcode": "WC1B 5EH",
+        "region": "Greater London"
+      },
+      "name": "Russell Square",
+      "related_places": {
+        "children": [
+          {
+            "fsq_id": "4bbeef1c85fbb71377707167",
+            "name": "Cafe in the Gardens"
+          },
+          {
+            "fsq_id": "5a2e7f22acb00b44f7e5abb0",
+            "name": "Russell Square Cab Hut"
+          }
+        ]
+      },
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "5901aefc9746172d9d0f6b42",
+      "categories": [
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 1089,
+      "geocodes": {
+        "main": {
+          "latitude": 51.521294,
+          "longitude": -0.10985
+        }
+      },
+      "location": {
+        "address": "75 Leather Lane",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "London",
+        "neighborhood": [
+          "Holborn and Covent Garden"
+        ],
+        "post_town": "London",
+        "postcode": "EC1N 7TJ",
+        "region": "Greater London"
+      },
+      "name": "Attendant",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "5866a25e53f5bb19264a061c",
+      "categories": [
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 1847,
+      "geocodes": {
+        "main": {
+          "latitude": 51.51606000719529,
+          "longitude": -0.12411071051324417
+        }
+      },
+      "location": {
+        "address": "188-189 Drury Lane",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "London",
+        "post_town": "London",
+        "postcode": "WC2B 5QD",
+        "region": "Greater London"
+      },
+      "name": "Drury 188-189",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4e05f14cfa767637fd210940",
+      "categories": [
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 1701,
+      "geocodes": {
+        "main": {
+          "latitude": 51.51857746687026,
+          "longitude": -0.12676119804382324
+        }
+      },
+      "location": {
+        "address": "Great Russell St",
+        "admin_region": "England",
+        "country": "GB",
+        "locality": "London",
+        "post_town": "London",
+        "postcode": "WC1B 3DG",
+        "region": "Greater London"
+      },
+      "name": "British Museum Members' Room",
+      "related_places": {
+        "parent": {
+          "fsq_id": "4ac518d2f964a5203da720e3",
+          "name": "The British Museum"
+        }
+      },
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "595f80432f97ec37ca81ea10",
+      "categories": [
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 1013,
+      "geocodes": {
+        "main": {
+          "latitude": 51.52286924274401,
+          "longitude": -0.1190263001599399
+        }
+      },
+      "location": {
+        "address": "84b Lamb’s Conduit St",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "London",
+        "neighborhood": [
+          "Holborn and Covent Garden"
+        ],
+        "post_town": "London",
+        "postcode": "WC1N 3LR",
+        "region": "Greater London"
+      },
+      "name": "Redemption Roasters",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4ac518edf964a520c1ac20e3",
+      "categories": [
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2106,
+      "geocodes": {
+        "main": {
+          "latitude": 51.514314,
+          "longitude": -0.126824
+        }
+      },
+      "location": {
+        "address": "27 Monmouth St, Covent Garden",
+        "admin_region": "England",
+        "country": "GB",
+        "locality": "London",
+        "neighborhood": [
+          "Covent Garden"
+        ],
+        "post_town": "London",
+        "postcode": "WC2H 9DD",
+        "region": "Greater London"
+      },
+      "name": "Monmouth Coffee Company",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4ac73e91f964a520d0b620e3",
+      "categories": [
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13148,
+          "name": "French Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/french_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2151,
+      "geocodes": {
+        "main": {
+          "latitude": 51.550133,
+          "longitude": -0.10783486
+        }
+      },
+      "location": {
+        "address": "6 Ronalds Rd",
+        "admin_region": "England",
+        "country": "GB",
+        "locality": "London",
+        "neighborhood": [
+          "Highbury"
+        ],
+        "post_town": "London",
+        "postcode": "N5 1XH",
+        "region": "Greater London"
+      },
+      "name": "Le Peche Mignon",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "53ff1d66498e3c1d0cb4712d",
+      "categories": [
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 940,
+      "geocodes": {
+        "main": {
+          "latitude": 51.52783791250915,
+          "longitude": -0.12495133730118925
+        }
+      },
+      "location": {
+        "address": "100-102 Judd St",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "London",
+        "neighborhood": [
+          "Holborn"
+        ],
+        "post_town": "London",
+        "postcode": "WC1H 9NT",
+        "region": "Greater London"
+      },
+      "name": "Half Cup",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4dcaa14a183817362fe73490",
+      "categories": [
+        {
+          "id": 13032,
+          "name": "Cafes, Coffee, and Tea Houses",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2226,
+      "geocodes": {
+        "main": {
+          "latitude": 51.512016,
+          "longitude": -0.122743
+        }
+      },
+      "location": {
+        "address": "1 The Market",
+        "admin_region": "England",
+        "country": "GB",
+        "locality": "London",
+        "neighborhood": [
+          "Covent Garden"
+        ],
+        "post_town": "London",
+        "postcode": "WC2E 8RA",
+        "region": "Greater London"
+      },
+      "name": "Ladurée",
+      "related_places": {
+        "parent": {
+          "fsq_id": "4ba6419bf964a520b23f39e3",
+          "name": "Covent Garden Market"
+        }
+      },
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "5ae84fcba6fe4d002cc4197c",
+      "categories": [
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 1281,
+      "geocodes": {
+        "main": {
+          "latitude": 51.52287157429973,
+          "longitude": -0.1254875385699253
+        }
+      },
+      "location": {
+        "address": "Burr & Co 1-8 Russell Square",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "Bernard St",
+        "locality": "London",
+        "post_town": "London",
+        "postcode": "WC1B 5BE",
+        "region": "Greater London"
+      },
+      "name": "Burr & Co",
+      "related_places": {
+        "parent": {
+          "fsq_id": "5adcf5b55455b261bbe4010b",
+          "name": "Kimpton Fitzroy London"
+        }
+      },
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "5e53df6702591a0008791559",
+      "categories": [
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2195,
+      "geocodes": {
+        "main": {
+          "latitude": 51.511429,
+          "longitude": -0.116948
+        }
+      },
+      "location": {
+        "address": "Somerset House",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "Aldwych",
+        "locality": "London",
+        "post_town": "London",
+        "postcode": "WC2R 1EL",
+        "region": "Greater London"
+      },
+      "name": "Watch House",
+      "related_places": {
+        "parent": {
+          "fsq_id": "4ac518cff964a52063a620e3",
+          "name": "Somerset House"
+        }
+      },
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "55c34aac498e536d77bc73b0",
+      "categories": [
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13145,
+          "name": "Fast Food Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/fastfood_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2059,
+      "geocodes": {
+        "main": {
+          "latitude": 51.51282288678408,
+          "longitude": -0.11834277753045877
+        }
+      },
+      "location": {
+        "address": "45 Aldwych",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "London",
+        "neighborhood": [
+          "Strand"
+        ],
+        "post_town": "London",
+        "postcode": "WC2B 4DW",
+        "region": "Greater London"
+      },
+      "name": "Lundenwic",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4f8e93fae4b0cb22879c6a25",
+      "categories": [
+        {
+          "id": 13002,
+          "name": "Bakery",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/bakery_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2367,
+      "geocodes": {
+        "main": {
+          "latitude": 51.51592578036752,
+          "longitude": -0.1365487399829042
+        }
+      },
+      "location": {
+        "address": "139 Oxford St",
+        "admin_region": "England",
+        "country": "GB",
+        "locality": "London",
+        "neighborhood": [
+          "West Central"
+        ],
+        "post_town": "London",
+        "postcode": "W1D 2JA",
+        "region": "Greater London"
+      },
+      "name": "Ben's Cookies",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4ac518bbf964a52039a220e3",
+      "categories": [
+        {
+          "id": 13009,
+          "name": "Cocktail Bar",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/cocktails_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13329,
+          "name": "Russian Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/russian_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2000,
+      "geocodes": {
+        "main": {
+          "latitude": 51.51541620739732,
+          "longitude": -0.12686848640441895
+        }
+      },
+      "location": {
+        "address": "198 Shaftesbury Ave",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "Monmouth St",
+        "locality": "London",
+        "neighborhood": [
+          "Covent Garden"
+        ],
+        "post_town": "London",
+        "postcode": "WC2H 8JL",
+        "region": "Greater London"
+      },
+      "name": "Freud",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4ad24f09f964a520d3e020e3",
+      "categories": [
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2393,
+      "geocodes": {
+        "main": {
+          "latitude": 51.51845746813275,
+          "longitude": -0.14047892160812275
+        }
+      },
+      "location": {
+        "address": "66 Great Titchfield St",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "Riding House St",
+        "locality": "London",
+        "neighborhood": [
+          "Fitzrovia"
+        ],
+        "post_town": "London",
+        "postcode": "W1W 7QJ",
+        "region": "Greater London"
+      },
+      "name": "Kaffeine",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "59cfa5c623472433bfdc1bf3",
+      "categories": [
+        {
+          "id": 13002,
+          "name": "Bakery",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/bakery_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13336,
+          "name": "Scandinavian Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/scandinavian_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 1971,
+      "geocodes": {
+        "main": {
+          "latitude": 51.517636444012304,
+          "longitude": -0.13110213566116347
+        }
+      },
+      "location": {
+        "address": "1 Bedford Ave",
+        "address_extended": "Unit 4",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "One Bedford Avenue",
+        "locality": "Fitzrovia",
+        "neighborhood": [
+          "Bloomsbury"
+        ],
+        "post_town": "London",
+        "postcode": "WC1B 3AU",
+        "region": "Greater London"
+      },
+      "name": "Ole & Steen",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4acdd000f964a52016cd20e3",
+      "categories": [
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13073,
+          "name": "Australian Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/australian_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13145,
+          "name": "Fast Food Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/fastfood_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2114,
+      "geocodes": {
+        "main": {
+          "latitude": 51.51897316016429,
+          "longitude": -0.13604735015181646
+        }
+      },
+      "location": {
+        "address": "13 Charlotte Pl",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "at Goodge St",
+        "locality": "Fitzrovia",
+        "neighborhood": [
+          "Fitzrovia"
+        ],
+        "post_town": "London",
+        "postcode": "W1T 1SN",
+        "region": "Greater London"
+      },
+      "name": "Lantana",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4c94a3d5f7cfa1cd6d71b515",
+      "categories": [
+        {
+          "id": 13036,
+          "name": "Tea Room",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/tearoom_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2141,
+      "geocodes": {
+        "main": {
+          "latitude": 51.516197763244044,
+          "longitude": -0.13219041866250336
+        }
+      },
+      "location": {
+        "address": "38 Oxford St",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "London",
+        "neighborhood": [
+          "West Central"
+        ],
+        "post_town": "London",
+        "postcode": "W1D 1BA",
+        "region": "Greater London"
+      },
+      "name": "Whittard of Chelsea",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "5c60236a7b385f003919a84f",
+      "categories": [
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2155,
+      "geocodes": {
+        "main": {
+          "latitude": 51.51948,
+          "longitude": -0.137424
+        }
+      },
+      "location": {
+        "address": "20 Cleveland St",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "London",
+        "post_town": "London",
+        "postcode": "W1T 4JA",
+        "region": "Greater London"
+      },
+      "name": "Kafi",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4c1512aaa9c220a1b77d589d",
+      "categories": [
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13263,
+          "name": "Japanese Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/japanese_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2739,
+      "geocodes": {
+        "main": {
+          "latitude": 51.51263165734176,
+          "longitude": -0.13876898482724873
+        }
+      },
+      "location": {
+        "address": "Kingly Ct",
+        "address_extended": "Ground Floor",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "at Beak St",
+        "locality": "London",
+        "neighborhood": [
+          "Soho"
+        ],
+        "post_town": "London",
+        "postcode": "W1B 5PW",
+        "region": "Greater London"
+      },
+      "name": "Kingly Court",
+      "related_places": {
+        "children": [
+          {
+            "fsq_id": "51d80a19498e080e4aa4d147",
+            "name": "Whyte & Brown"
+          },
+          {
+            "fsq_id": "4b5ae2daf964a520d8d828e3",
+            "name": "It's Something Hell's"
+          },
+          {
+            "fsq_id": "5a1e9d6de96d0c41cd9fb8e0",
+            "name": "The Good Egg Soho"
+          }
+        ]
+      },
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4ac518e7f964a52067ab20e3",
+      "categories": [
+        {
+          "id": 10026,
+          "name": "Indie Movie Theater",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/arts_entertainment/movietheater_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13003,
+          "name": "Bar",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13032,
+          "name": "Cafes, Coffee, and Tea Houses",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2722,
+      "geocodes": {
+        "main": {
+          "latitude": 51.506538709288606,
+          "longitude": -0.11503007410473354
+        }
+      },
+      "location": {
+        "address": "Belvedere Rd",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "London",
+        "neighborhood": [
+          "Waterloo"
+        ],
+        "post_town": "London",
+        "postcode": "SE1 8XT",
+        "region": "Greater London"
+      },
+      "name": "BFI Southbank",
+      "related_places": {
+        "children": [
+          {
+            "fsq_id": "4c9e29b58afca09323eafd15",
+            "name": "BFI Mediatheque"
+          },
+          {
+            "fsq_id": "4ae9e00ff964a52036b721e3",
+            "name": "BFI Bar & Kitchen"
+          }
+        ]
+      },
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "5113babbd63e8bb673ce4b25",
+      "categories": [
+        {
+          "id": 13002,
+          "name": "Bakery",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/bakery_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13032,
+          "name": "Cafes, Coffee, and Tea Houses",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2870,
+      "geocodes": {
+        "main": {
+          "latitude": 51.50956385935709,
+          "longitude": -0.1355359951960031
+        }
+      },
+      "location": {
+        "address": "16 Piccadilly",
+        "admin_region": "England",
+        "country": "GB",
+        "locality": "London",
+        "neighborhood": [
+          "West Central"
+        ],
+        "post_town": "London",
+        "postcode": "W1J 0DE",
+        "region": "Greater London"
+      },
+      "name": "Carpo Piccadilly",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "585970d56ad73d0218d2eb31",
+      "categories": [
+        {
+          "id": 13032,
+          "name": "Cafes, Coffee, and Tea Houses",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2804,
+      "geocodes": {
+        "main": {
+          "latitude": 51.5091959,
+          "longitude": -0.1327875
+        }
+      },
+      "location": {
+        "address": "St James",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "Norris St",
+        "locality": "London",
+        "neighborhood": [
+          "St James"
+        ],
+        "post_town": "London",
+        "postcode": "SW1Y 4RP",
+        "region": "Greater London"
+      },
+      "name": "Ole & Steen",
+      "related_places": {
+        "parent": {
+          "fsq_id": "4fd4d768e4b07b0662da435e",
+          "name": "St. James's Market"
+        }
+      },
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4f182f1aa17c202e1058990c",
+      "categories": [
+        {
+          "id": 13036,
+          "name": "Tea Room",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/tearoom_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2801,
+      "geocodes": {
+        "main": {
+          "latitude": 51.510841946803126,
+          "longitude": -0.1367040766189636
+        }
+      },
+      "location": {
+        "address": "85 Brewer St",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "London",
+        "neighborhood": [
+          "Soho"
+        ],
+        "post_town": "London",
+        "postcode": "W1F 9ZN",
+        "region": "Greater London"
+      },
+      "name": "Rapha Cycle Club",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "5c139526cbcdee002cec09fb",
+      "categories": [
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2237,
+      "geocodes": {
+        "main": {
+          "latitude": 51.516490539870844,
+          "longitude": -0.13477796817067433
+        }
+      },
+      "location": {
+        "address": "Rathbone Sq",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "Newman St",
+        "locality": "Fitzrovia",
+        "post_town": "London",
+        "postcode": "W1T 1PB",
+        "region": "Greater London"
+      },
+      "name": "Omotesando Koffee",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "5811aaaf38fa744ccb1ca703",
+      "categories": [
+        {
+          "id": 13032,
+          "name": "Cafes, Coffee, and Tea Houses",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13139,
+          "name": "Eastern European Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13310,
+          "name": "Modern European Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 3125,
+      "geocodes": {
+        "main": {
+          "latitude": 51.50453327171197,
+          "longitude": -0.09691316619897597
+        }
+      },
+      "location": {
+        "address": "30 Great Guildford St",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "London",
+        "neighborhood": [
+          "South Bank Borough etc"
+        ],
+        "post_town": "London",
+        "postcode": "SE1 0HS",
+        "region": "Greater London"
+      },
+      "name": "Caravan Bankside",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4ac518bcf964a5207ba220e3",
+      "categories": [
+        {
+          "id": 13003,
+          "name": "Bar",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13236,
+          "name": "Italian Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/italian_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2355,
+      "geocodes": {
+        "main": {
+          "latitude": 51.51339366006157,
+          "longitude": -0.13133355133176974
+        }
+      },
+      "location": {
+        "address": "22 Frith St",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "at Old Compton St",
+        "locality": "Soho",
+        "neighborhood": [
+          "Soho"
+        ],
+        "post_town": "London",
+        "postcode": "W1D 4RP",
+        "region": "Greater London"
+      },
+      "name": "Bar Italia",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "524eb68e11d298c7ea16b233",
+      "categories": [
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13045,
+          "name": "Gelato Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/icecream_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2447,
+      "geocodes": {
+        "main": {
+          "latitude": 51.51366049557673,
+          "longitude": -0.1341972781030858
+        }
+      },
+      "location": {
+        "address": "102 Wardour St",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "Soho",
+        "neighborhood": [
+          "West Central"
+        ],
+        "post_town": "London",
+        "postcode": "W1F 0TP",
+        "region": "Greater London"
+      },
+      "name": "Snowflake Luxury Gelato",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "551a8e5b498eb6557b961282",
+      "categories": [
+        {
+          "id": 13032,
+          "name": "Cafes, Coffee, and Tea Houses",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2573,
+      "geocodes": {
+        "main": {
+          "latitude": 51.513318595757305,
+          "longitude": -0.13640320712945936
+        }
+      },
+      "location": {
+        "address": "53 Lexington St",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "London",
+        "neighborhood": [
+          "Soho"
+        ],
+        "post_town": "London",
+        "postcode": "W1F 9AS"
+      },
+      "name": "Bao",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "533c55d3498e3f1588a54483",
+      "categories": [
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2759,
+      "geocodes": {
+        "main": {
+          "latitude": 51.51212,
+          "longitude": -0.13828397
+        }
+      },
+      "location": {
+        "address": "19 Beak St",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "Soho",
+        "neighborhood": [
+          "Soho"
+        ],
+        "post_town": "London",
+        "postcode": "W1F 9RP",
+        "region": "Greater London"
+      },
+      "name": "Soho Grind",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "5d458d0468b7bc00086e9e89",
+      "categories": [
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2938,
+      "geocodes": {
+        "main": {
+          "latitude": 51.509817,
+          "longitude": -0.137811
+        }
+      },
+      "location": {
+        "address": "27-29 Swallow St",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "London",
+        "post_town": "London",
+        "postcode": "W1B 4DW",
+        "region": "Greater London"
+      },
+      "name": "Hagen",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "5e0238c69ad0bf0007a64476",
+      "categories": [
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2184,
+      "geocodes": {
+        "main": {
+          "latitude": 51.513614,
+          "longitude": -0.127131
+        }
+      },
+      "location": {
+        "address": "32-34 Monmouth St",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "London",
+        "post_town": "London",
+        "postcode": "WC2H 9HA",
+        "region": "Greater London"
+      },
+      "name": "Apple Butter Cafe",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4ea95d0b6d86765d4111781c",
+      "categories": [
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2931,
+      "geocodes": {
+        "main": {
+          "latitude": 51.50925365838019,
+          "longitude": -0.13636260069397133
+        }
+      },
+      "location": {
+        "address": "200-202 Piccadilly, St. James's",
+        "address_extended": "Unit 3",
+        "admin_region": "England",
+        "country": "GB",
+        "locality": "London",
+        "neighborhood": [
+          "Mayfair"
+        ],
+        "post_town": "London",
+        "postcode": "W1J 9HU",
+        "region": "Greater London"
+      },
+      "name": "Kahve Dunyasi",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4ae99b09f964a52052b521e3",
+      "categories": [
+        {
+          "id": 13032,
+          "name": "Cafes, Coffee, and Tea Houses",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13044,
+          "name": "Frozen Yogurt Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/frozenyogurt_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2547,
+      "geocodes": {
+        "main": {
+          "latitude": 51.51235392242397,
+          "longitude": -0.13380848262426007
+        }
+      },
+      "location": {
+        "address": "9 Brewer St",
+        "admin_region": "England",
+        "country": "GB",
+        "locality": "Soho",
+        "post_town": "London",
+        "postcode": "W1F 0RG",
+        "region": "Greater London"
+      },
+      "name": "Snog Frozen Yogurt",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "5ca4bc31e0c0c9003962c988",
+      "categories": [
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 1562,
+      "geocodes": {
+        "main": {
+          "latitude": 51.517919,
+          "longitude": -0.120695
+        }
+      },
+      "location": {
+        "address": "One Southampton Row",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "Holborn",
+        "post_town": "London",
+        "postcode": "WC1B 5HA",
+        "region": "Greater London"
+      },
+      "name": "Half Million",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4e803da030f8a9b9d75ee8f6",
+      "categories": [
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2681,
+      "geocodes": {
+        "main": {
+          "latitude": 51.51351967202485,
+          "longitude": -0.1390868787116154
+        }
+      },
+      "location": {
+        "address": "3 Lowndes Ct",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "Carnaby St",
+        "locality": "London",
+        "neighborhood": [
+          "West Central"
+        ],
+        "post_town": "London",
+        "postcode": "W1F 7HD",
+        "region": "Greater London"
+      },
+      "name": "Department of Coffee and Social Affairs",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "54eb256e498e0c8bb8a7de2f",
+      "categories": [
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13057,
+          "name": "Gastropub",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/gastropub_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 915,
+      "geocodes": {
+        "main": {
+          "latitude": 51.53315584767263,
+          "longitude": -0.12508392107650143
+        }
+      },
+      "location": {
+        "address": "1 Pancras Sq",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "King's Cross",
+        "neighborhood": [
+          "Kings Cross"
+        ],
+        "post_town": "London",
+        "postcode": "N1C 4AG",
+        "region": "Greater London"
+      },
+      "name": "Notes",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "614a0a50a5fd9e3ba0450aa7",
+      "categories": [
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 3222,
+      "geocodes": {
+        "main": {
+          "latitude": 51.50774081135853,
+          "longitude": -0.14020442962646482
+        }
+      },
+      "location": {
+        "address": "162 Piccadilly",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "St James's St",
+        "locality": "London",
+        "post_town": "London",
+        "postcode": "W1J 9EF",
+        "region": "Greater London"
+      },
+      "name": "The Gentlemen Baristas",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "59be4032b040562cd06170e6",
+      "categories": [
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2536,
+      "geocodes": {
+        "main": {
+          "latitude": 51.5537845750571,
+          "longitude": -0.11355005633946046
+        }
+      },
+      "location": {
+        "address": "256-268 Holloway Rd",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "London",
+        "neighborhood": [
+          "Holloway"
+        ],
+        "post_town": "London",
+        "postcode": "N7 8HG",
+        "region": "Greater London"
+      },
+      "name": "Coffee Zee",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4cdadd2dc409b60cac66d11a",
+      "categories": [
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2573,
+      "geocodes": {
+        "main": {
+          "latitude": 51.509696003098284,
+          "longitude": -0.12698537841552573
+        }
+      },
+      "location": {
+        "address": "31 St Martin's Lane",
+        "admin_region": "England",
+        "country": "GB",
+        "locality": "London",
+        "neighborhood": [
+          "Strand"
+        ],
+        "post_town": "London",
+        "postcode": "WC2N 4ER",
+        "region": "Greater London"
+      },
+      "name": "Notes",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4d808b1f1013236a14aa8935",
+      "categories": [
+        {
+          "id": 13007,
+          "name": "Beer Garden",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/beergarden_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13032,
+          "name": "Cafes, Coffee, and Tea Houses",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13145,
+          "name": "Fast Food Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/fastfood_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 3212,
+      "geocodes": {
+        "main": {
+          "latitude": 51.50455542612896,
+          "longitude": -0.09343743324279784
+        }
+      },
+      "location": {
+        "address": "68 Union St",
+        "admin_region": "England",
+        "country": "GB",
+        "locality": "London",
+        "neighborhood": [
+          "Southwark"
+        ],
+        "post_town": "London",
+        "postcode": "SE1 1TD",
+        "region": "Greater London"
+      },
+      "name": "Flat Iron Square",
+      "related_places": {
+        "children": [
+          {
+            "fsq_id": "5827217b27e8a32a79afc7cd",
+            "name": "Bar Douro London Bridge"
+          },
+          {
+            "fsq_id": "5a842995febf3157413951ad",
+            "name": "Bittenclub"
+          },
+          {
+            "fsq_id": "5a842b19db1d812179356173",
+            "name": "Flea at Flat Iron Square"
+          }
+        ]
+      },
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "5fd4b8c4486f93257c44d4f6",
+      "categories": [
+        {
+          "id": 13032,
+          "name": "Cafes, Coffee, and Tea Houses",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2480,
+      "geocodes": {
+        "main": {
+          "latitude": 51.516381,
+          "longitude": -0.139461
+        }
+      },
+      "location": {
+        "address": "Oxford Circus",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "",
+        "locality": "London",
+        "post_town": "London",
+        "postcode": "W1W 8DX",
+        "region": "Greater London"
+      },
+      "name": "Ole & Steen",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "5c079375deb4950025e2e75e",
+      "categories": [
+        {
+          "id": 13032,
+          "name": "Cafes, Coffee, and Tea Houses",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2390,
+      "geocodes": {
+        "main": {
+          "latitude": 51.512013,
+          "longitude": -0.128622
+        }
+      },
+      "location": {
+        "address": "67-69 Charing Cross Rd",
+        "address_extended": "67-69 Charing Cross Road, Unit 8",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "Unit 8",
+        "locality": "London",
+        "post_town": "London",
+        "postcode": "WC2H 0NE",
+        "region": "Greater London"
+      },
+      "name": "Ole & Steen",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "4b0c6aa1f964a520cd3c23e3",
+      "categories": [
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13035,
+          "name": "Coffee Shop",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 4007,
+      "geocodes": {
+        "main": {
+          "latitude": 51.49749647419568,
+          "longitude": -0.13385812172317216
+        }
+      },
+      "location": {
+        "address": "4 Strutton Ground",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "at Old Pye St",
+        "locality": "London",
+        "neighborhood": [
+          "St. James's"
+        ],
+        "post_town": "London",
+        "postcode": "SW1P 2HR",
+        "region": "Greater London"
+      },
+      "name": "Flat Cap Coffee Co",
+      "related_places": {},
+      "timezone": "Europe/London"
+    },
+    {
+      "fsq_id": "54e4809b498e5fe3d08a9520",
+      "categories": [
+        {
+          "id": 13034,
+          "name": "Café",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/cafe_",
+            "suffix": ".png"
+          }
+        },
+        {
+          "id": 13065,
+          "name": "Restaurant",
+          "icon": {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+            "suffix": ".png"
+          }
+        }
+      ],
+      "chains": [],
+      "distance": 2017,
+      "geocodes": {
+        "main": {
+          "latitude": 51.54884799868188,
+          "longitude": -0.1071710110740137
+        }
+      },
+      "location": {
+        "address": "60 Holloway Rd",
+        "admin_region": "England",
+        "country": "GB",
+        "cross_street": "Fieldway Crescent",
+        "locality": "Islington",
+        "neighborhood": [
+          "Holloway"
+        ],
+        "post_town": "London",
+        "postcode": "N7 8JL",
+        "region": "Greater London"
+      },
+      "name": "The Barn",
+      "related_places": {},
+      "timezone": "Europe/London"
+    }
+  ],
+  "context": {
+    "geo_bounds": {
+      "circle": {
+        "center": {
+          "latitude": 51.530975568928554,
+          "longitude": -0.11230945587158205
+        },
+        "radius": 3733
+      }
+    }
+  }
+}
