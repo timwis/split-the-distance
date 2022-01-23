@@ -57,22 +57,21 @@ export default {
   },
   async asyncData ({ query, $travelTime }) {
     const {
-      points: pointsStrings,
+      points: pointStrings,
       labels,
       travelTime,
       travelMode,
       arrivalTime
     } = query
 
-    const points = pointsStrings.map(stringToArray)
+    const origins = pointStrings.map((pointString, index) => ({
+      point: stringToArray(pointString),
+      label: labels[index] || `Location ${index + 1}`
+    }))
 
-    const opts = { points, labels, travelMode, travelTime, arrivalTime }
-    const data = await $travelTime.timeMap(opts)
+    const opts = { origins, travelMode, travelTime, arrivalTime }
+    const timeMaps = await $travelTime.timeMap(opts)
 
-    const timeMaps = data.results.reduce((accum, isochrone) => {
-      accum[isochrone.search_id] = isochroneToPolygon(isochrone)
-      return accum
-    }, {})
     return { timeMaps }
   },
   data () {

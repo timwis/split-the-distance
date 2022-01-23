@@ -1,4 +1,11 @@
-import { geojsonArrayToObject } from '~/lib/geometry'
+import { geojsonArrayToObject, isochroneToPolygon } from '~/lib/geometry'
+
+/**
+ * A location
+ * @typedef {Object} Location
+ * @property {string} label
+ * @property {number[]} point
+ */
 
 export default function ({ $axios }, inject) {
   const travelTime = new TravelTime($axios)
@@ -13,20 +20,24 @@ class TravelTime {
     })
   }
 
-  geocode (query) {
-    const params = { query }
-    return this.client.$get('/geocoding/search', { params })
-  }
-
-  timeMap ({ points, labels, travelMode, travelTime, arrivalTime = (new Date()).toISOString() }) {
-    if (process.env.NUXT_ENV_STUB_TRAVEL_TIME) {
-      return this.client.$get('/time-map.json')
-    }
-
-    const data = {
-      arrival_searches: points.map((point, index) => ({
-        id: labels[index] || `isochrone-${index}`,
-        coords: geojsonArrayToObject(point),
+  /**
+   * Generate isochrones from origins and intersection
+   * @param {Object} params
+   * @param {Location[]} params.origins
+   * @param {string} travelMode
+   * @param {number} travelTime
+   * @param {string} arrivalTime
+   */
+  async timeMap ({
+    origins,
+    travelMode,
+    travelTime,
+    arrivalTime = (new Date()).toISOString()
+  }) {
+    const opts = {
+      arrival_searches: origins.map(origin => ({
+        id: origin.label,
+        coords: geojsonArrayToObject(origin.point),
         transportation: { type: travelMode },
         arrival_time: arrivalTime,
         travel_time: travelTime * 60
@@ -34,11 +45,15 @@ class TravelTime {
       intersections: [
         {
           id: 'intersection',
-          search_ids: labels
+          search_ids: origins.map(origin => origin.label)
         }
       ]
     }
+    const data = await this.client.$post('/time-map', opts)
 
-    return this.client.$post('/time-map', data)
+    return data.results.reduce((accum, isochrone) => {
+      accum[isochrone.search_id] = isochroneToPolygon(isochrone)
+      return accum
+    }, {})
   }
 }
