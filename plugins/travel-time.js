@@ -1,3 +1,5 @@
+import find from 'lodash/find'
+
 import { geojsonArrayToObject, isochroneToPolygon } from '~/lib/geometry'
 
 /**
@@ -21,14 +23,15 @@ class TravelTime {
   }
 
   /**
-   * Generate isochrones from origins and intersection
+   * Gets polygon of areas where origin isochrones intersect
    * @param {Object} params
    * @param {Location[]} params.origins
    * @param {string} travelMode
    * @param {number} travelTime
-   * @param {string} arrivalTime
+   * @param {string?} arrivalTime
+   * @returns {Polygon}
    */
-  async timeMap ({
+  async getIntersection ({
     origins,
     travelMode,
     travelTime,
@@ -50,10 +53,7 @@ class TravelTime {
       ]
     }
     const data = await this.client.$post('/time-map', opts)
-
-    return data.results.reduce((accum, isochrone) => {
-      accum[isochrone.search_id] = isochroneToPolygon(isochrone)
-      return accum
-    }, {})
+    const intersection = find(data.results, ['search_id', 'intersection'])
+    return isochroneToPolygon(intersection)
   }
 }

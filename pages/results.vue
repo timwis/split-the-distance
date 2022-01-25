@@ -7,20 +7,19 @@
         :zoom="zoom"
         :center="center"
         :options="{ tap: false }"
-        @ready="fitBounds"
-        @update:bounds="fetchPlaces"
       >
         <l-tile-layer url="https://{s}.tile.osm.org/{z}/{x}/{y}.png" />
         <l-polygon
-          v-for="(timeMap, key, index) in timeMaps"
+          v-for="(intersection, index) in intersections"
           ref="isochrones"
-          :key="key"
-          :lat-lngs="timeMap"
-          :fill-color="['blue', 'red', 'purple'][index]"
-          :color="['blue', 'red', 'purple'][index]"
-          :name="key"
+          :key="intersection.travelTime"
+          :lat-lngs="intersection.polygon"
+          :fill-color="['blue', 'purple', 'red'][index]"
+          :color="['blue', 'purple', 'red'][index]"
           :weight="1"
-        />
+        >
+          <l-popup :content="`${intersection.travelTime} minutes`" />
+        </l-polygon>
         <l-marker
           v-for="place in places"
           :key="place.fsq_id"
@@ -35,7 +34,14 @@
 </template>
 
 <script>
-import { stringToArray, isochroneToPolygon, leafletLatLngToString, foursquareObjectToLeafletObject } from '@/lib/geometry'
+import flattenDeep from 'lodash/flattenDeep'
+import isEmpty from 'lodash/isEmpty'
+
+import {
+  stringToArray,
+  leafletLatLngToString,
+  foursquareObjectToLeafletObject
+} from '@/lib/geometry'
 
 export default {
   name: 'ResultsPage',
@@ -59,7 +65,6 @@ export default {
     const {
       points: pointStrings,
       labels,
-      travelTime,
       travelMode,
       arrivalTime
     } = query
@@ -69,17 +74,29 @@ export default {
       label: labels[index] || `Location ${index + 1}`
     }))
 
-    const opts = { origins, travelMode, travelTime, arrivalTime }
-    const timeMaps = await $travelTime.timeMap(opts)
+    const requests = [45, 30, 20].map(async (travelTime) => {
+      const opts = { origins, travelMode, travelTime, arrivalTime }
+      const polygon = await $travelTime.getIntersection(opts)
+      return { travelTime, polygon }
+    })
+    const intersections = await Promise.all(requests)
 
-    return { timeMaps }
+    return { intersections }
   },
   data () {
     return {
       center: stringToArray(this.$route.query.points[0]).reverse(), // lat,lng for leaflet
       zoom: 12,
       timeMaps: {},
+      intersections: [],
       places: []
+    }
+  },
+  computed: {
+    nonEmptyIntersections () {
+      return this.intersections.filter(
+        intersection => !isEmpty(flattenDeep(intersection.polygon))
+      )
     }
   },
   watchQuery: ['points', 'travelTime', 'travelMode'],
@@ -106,3 +123,9 @@ export default {
   }
 }
 </script>
+
+<style>
+#map g {
+  opacity: 0.4;
+}
+</style>
