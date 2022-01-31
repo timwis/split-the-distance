@@ -1,42 +1,37 @@
 import find from 'lodash/find'
+import { Plugin } from '@nuxt/types'
+import { NuxtAxiosInstance } from '@nuxtjs/axios'
 
 import { geojsonArrayToObject, isochroneToPolygon } from '~/lib/geometry'
 
-/**
- * A location
- * @typedef {Object} Location
- * @property {string} label
- * @property {number[]} point
- */
+interface Location {
+  label: string
+  point: number[]
+}
 
-export default function ({ $axios }, inject) {
-  const travelTime = new TravelTime($axios)
-  inject('travelTime', travelTime)
+interface GetIntersectionParams {
+  origins: Location[],
+  travelMode: 'cycling' | 'driving' | 'public_transport' | 'walking',
+  travelTime: number
+  arrivalTime?: string
 }
 
 class TravelTime {
-  constructor ($axios) {
+  private client: NuxtAxiosInstance
+  
+  constructor ($axios: NuxtAxiosInstance) {
     const currentBaseURL = $axios.defaults.baseURL
     this.client = $axios.create({
       baseURL: currentBaseURL + 'traveltime/'
     })
   }
 
-  /**
-   * Gets polygon of areas where origin isochrones intersect
-   * @param {Object} params
-   * @param {Location[]} params.origins
-   * @param {string} travelMode
-   * @param {number} travelTime
-   * @param {string?} arrivalTime
-   * @returns {Polygon}
-   */
   async getIntersection ({
     origins,
     travelMode,
     travelTime,
     arrivalTime = (new Date()).toISOString()
-  }) {
+  }: GetIntersectionParams) {
     const opts = {
       arrival_searches: origins.map(origin => ({
         id: origin.label,
@@ -57,3 +52,31 @@ class TravelTime {
     return isochroneToPolygon(intersection)
   }
 }
+
+const plugin: Plugin = function ({ $axios }, inject) {
+  const travelTime = new TravelTime($axios)
+  inject('travelTime', travelTime)
+}
+
+declare module 'vue/types/vue' {
+  interface Vue {
+    $travelTime: TravelTime
+  }
+}
+
+declare module '@nuxt/types' {
+  interface NuxtAppOptions {
+    $travelTime: TravelTime
+  }
+  interface Context {
+    $travelTime($axios: NuxtAxiosInstance): void
+  }
+}
+
+declare module 'vuex/types/index' {
+  interface Store<S> {
+    $travelTime: TravelTime
+  }
+}
+
+export default plugin

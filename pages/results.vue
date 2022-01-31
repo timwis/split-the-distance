@@ -33,7 +33,9 @@
   </main>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
+import '@nuxt/types'
 import flattenDeep from 'lodash/flattenDeep'
 import isEmpty from 'lodash/isEmpty'
 
@@ -43,7 +45,7 @@ import {
   foursquareObjectToLeafletObject
 } from '@/lib/geometry'
 
-export default {
+export default Vue.extend({
   name: 'ResultsPage',
   filters: { foursquareObjectToLeafletObject },
   validate ({ query }) {
@@ -57,8 +59,8 @@ export default {
     ]
 
     return requiredParams.every(param => query[param]) &&
-      validTravelModes.includes(query.travelMode) &&
-      validVenueTypes.includes(query.venueType) &&
+      validTravelModes.includes(query.travelMode as string) &&
+      validVenueTypes.includes(query.venueType as string) &&
       query.points.length >= 2
   },
   async asyncData ({ query, $travelTime }) {
@@ -67,7 +69,12 @@ export default {
       labels,
       travelMode,
       arrivalTime
-    } = query
+    } = query as {
+      points: string[],
+      labels: string[],
+      travelMode: 'cycling' | 'driving' | 'public_transport' | 'walking',
+      arrivalTime: string
+    }
 
     const origins = pointStrings.map((pointString, index) => ({
       point: stringToArray(pointString),
@@ -85,7 +92,6 @@ export default {
   },
   data () {
     return {
-      center: stringToArray(this.$route.query.points[0]).reverse(), // lat,lng for leaflet
       zoom: 12,
       timeMaps: {},
       intersections: [],
@@ -93,6 +99,9 @@ export default {
     }
   },
   computed: {
+    center () {
+      return stringToArray(this.$route.query.points[0]).reverse() // lat,lng for leaflet
+    },
     nonEmptyIntersections () {
       return this.intersections.filter(
         intersection => !isEmpty(flattenDeep(intersection.polygon))
@@ -110,18 +119,18 @@ export default {
         map.fitBounds(intersection.mapObject.getBounds())
       }
     },
-    async fetchPlaces () {
-      const map = this.$refs.map.mapObject
-      const bounds = map.getBounds()
-      const ne = leafletLatLngToString(bounds.getNorthEast())
-      const sw = leafletLatLngToString(bounds.getSouthWest())
-      const category = this.$route.query.venueType
+    // async fetchPlaces () {
+    //   const map = this.$refs.map.mapObject
+    //   const bounds = map.getBounds()
+    //   const ne = leafletLatLngToString(bounds.getNorthEast())
+    //   const sw = leafletLatLngToString(bounds.getSouthWest())
+    //   const category = this.$route.query.venueType
 
-      const data = await this.$foursquare.search({ category, ne, sw })
-      this.places = data.results
-    }
+    //   const data = await this.$foursquare.search({ category, ne, sw })
+    //   this.places = data.results
+    // }
   }
-}
+})
 </script>
 
 <style>

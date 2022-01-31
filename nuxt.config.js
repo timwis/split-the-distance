@@ -24,7 +24,7 @@ export default {
   plugins: [
     '~/plugins/foursquare.js',
     '~/plugins/mapbox.js',
-    '~/plugins/travel-time.js'
+    '~/plugins/travel-time.ts'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -33,7 +33,8 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    ['@nuxtjs/eslint-module', { failOnError: false, failOnWarning: false }]
+    ['@nuxtjs/eslint-module', { failOnError: false, failOnWarning: false }],
+    '@nuxt/typescript-build'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
