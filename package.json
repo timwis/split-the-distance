@@ -32,6 +32,8 @@
 	"type": "module",
 	"dependencies": {
 		"@fortawesome/free-solid-svg-icons": "^5.15.4",
+		"@mapbox/mapbox-sdk": "^0.13.2",
+		"lodash": "^4.17.21",
 		"svelte-fa": "^2.4.0"
 	}
 }
