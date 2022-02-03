@@ -1,2 +1,21 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+  import Fa from 'svelte-fa'
+  import { faSearch } from '@fortawesome/free-solid-svg-icons'
+</script>
+
+<svelte:head>
+  <title>Split the Distance</title>
+</svelte:head>
+
+<section class="section">
+  <div class="container">
+    <p>Find mutually convenient places to meet</p>
+
+    <a class="button is-primary" href="/search">
+      <span>Search</span>
+      <span class="icon">
+        <Fa icon={faSearch} />
+      </span>
+    </a>
+  </div>
+</section>
