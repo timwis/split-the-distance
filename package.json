@@ -33,7 +33,9 @@
 	"dependencies": {
 		"@fortawesome/free-solid-svg-icons": "^5.15.4",
 		"@mapbox/mapbox-sdk": "^0.13.2",
+		"date-fns": "^2.28.0",
 		"lodash": "^4.17.21",
+		"simple-svelte-autocomplete": "^2.2.4",
 		"svelte-fa": "^2.4.0"
 	}
 }
