@@ -16,6 +16,6 @@
 	#app {
 		display: grid;
 		grid-template-rows: 52px calc(100vh - 52px);
-		grid-template-areas: "header" "main";
+		grid-template-areas: 'header' 'main';
 	}
 </style>
