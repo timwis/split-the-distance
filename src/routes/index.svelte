@@ -1,21 +1,22 @@
 <script lang="ts">
-  import { add, roundToNearestMinutes, format } from 'date-fns'
+  import { goto } from '$app/navigation'
   import Fa from 'svelte-fa'
-  import { faCarAlt, faBicycle, faBus, faWalking } from '@fortawesome/free-solid-svg-icons'
-  import LocationInput from '$lib/LocationInput.svelte'
-import { mode } from '$app/env'
+  import {
+    faCarAlt,
+    faBicycle,
+    faBus,
+    faWalking
+  } from '@fortawesome/free-solid-svg-icons'
 
-  interface GeocodeResult {
-    id: string,
-    text: string,
-    place_name: string,
-    center: number[]
-  }
-  
-  let yourLocation: GeocodeResult
-  let theirLocation: GeocodeResult
-  let travelMode: 'driving' | 'cycling' | 'public_transport' | 'walking' = 'public_transport'
-  let arrivalTime = formatDateForInput(aboutAnHourFromNow())
+  import LocationInput from '$lib/LocationInput.svelte'
+  import { formatDateForInput, aboutAnHourFromNow } from '$lib/utils/time'
+  import {
+    yourLocation,
+    theirLocation,
+    travelMode,
+    arrivalTime
+  } from '$lib/stores'
+
   const minArrivalTime = formatDateForInput(new Date())
   const travelModeOptions = [
     { key: 'driving', label: 'Driving', icon: faCarAlt },
@@ -24,15 +25,20 @@ import { mode } from '$app/env'
     { key: 'walking', label: 'Walking', icon: faWalking }
   ]
   
-  function aboutAnHourFromNow () {
-    const oneHourFromNow = add(new Date(), { hours: 1 })
-    return roundToNearestMinutes(oneHourFromNow, { nearestTo: 15 })
+  const handleSubmit = (event: Event) => {
+    const query = new URLSearchParams({
+      travelMode: $travelMode,
+      arrivalTime: $arrivalTime
+    })
+    query.append('points', $yourLocation.center.join(','))
+    query.append('points', $theirLocation.center.join(','))
+    query.append('labels', $yourLocation.text)
+    query.append('labels', $theirLocation.text)
+
+    const url = `/search?${query.toString()}`
+    goto(url)
   }
   
-  function formatDateForInput (date: Date) {
-    // datetime-local inputs cannot have a timezone
-    return format(date, `yyyy-MM-dd'T'HH:mm`)
-  }
 </script>
 
 <svelte:head>
@@ -43,14 +49,14 @@ import { mode } from '$app/env'
   <div class="container">
     <p>Find mutually convenient places to meet</p>
 
-    <form>
+    <form on:submit|preventDefault={handleSubmit}>
       <div class="field">
         <label class="label" for="yourLocation">Your location</label>
         <div class="control">
           <LocationInput
             name="yourLocation"
             id="yourLocation"
-            bind:selectedItem={yourLocation}
+            bind:selectedItem={$yourLocation}
           />
         </div>
       </div>
@@ -61,7 +67,7 @@ import { mode } from '$app/env'
           <LocationInput
             name="theirLocation"
             id="theirLocation"
-            bind:selectedItem={theirLocation}
+            bind:selectedItem={$theirLocation}
           />
         </div>
       </div>
@@ -69,7 +75,7 @@ import { mode } from '$app/env'
       <div class="label">Travel mode</div>
       <div class="field has-addons">
         {#each travelModeOptions as mode}
-          {@const isSelected = travelMode === mode.key}
+          {@const isSelected = $travelMode === mode.key}
           {@const selectedClasses = 'is-primary is-outlined is-light is-selected'}
           <div class="control">
             <label class="radio button {isSelected ? selectedClasses : ''}">
@@ -81,7 +87,7 @@ import { mode } from '$app/env'
                 value={mode.key}
                 name="travelMode"
                 id="travelMode"
-                bind:group={travelMode}
+                bind:group={$travelMode}
               >
             </label>
           </div>
@@ -96,7 +102,7 @@ import { mode } from '$app/env'
             name="arrivalTime"
             id="arrivalTime"
             class="input"
-            bind:value={arrivalTime}
+            bind:value={$arrivalTime}
             min={minArrivalTime}
           >
         </div>

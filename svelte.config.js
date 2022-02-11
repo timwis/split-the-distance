@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
+import { isoImport } from 'vite-plugin-iso-import';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -16,9 +17,6 @@ const config = {
 	kit: {
 		adapter: adapter(),
 
-		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte',
-
 		vite: {
 			css: {
 				preprocessorOptions: {
@@ -26,7 +24,10 @@ const config = {
 						additionalData: '@use "src/variables.scss" as *;'
 					}
 				}
-			}
+			},
+			plugins: [
+				isoImport()
+			]
 		}
 	}
 };
