@@ -1,3 +1,17 @@
+interface LatLngObject {
+	lat: number
+	lng: number
+}
+interface TimeMapResultShape {
+	shell: LatLngObject[]
+	holes: LatLngObject[]
+}
+interface TimeMapResult {
+	search_id: string
+	shapes: TimeMapResultShape[]
+}
+type Polygon = number[][][][]
+
 export function stringToArray(pointString) {
 	return pointString.split(',').map((item) => +item)
 }
@@ -30,7 +44,7 @@ export function foursquareObjectToLeafletObject(pointObject) {
 	}
 }
 
-export function isochroneToPolygon(isochrone) {
+export function isochroneToPolygon(isochrone: TimeMapResult): Polygon {
 	return isochrone.shapes.map((polygon) => {
 		const shell = polygon.shell.map(objectToLeafletArray)
 		const holes = polygon.holes.map((hole) => hole.map(objectToLeafletArray))

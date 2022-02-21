@@ -1,3 +1,4 @@
+import slugify from 'slugify'
 import {
 	geojsonArrayToObject,
 	isochroneToPolygon,
@@ -6,6 +7,7 @@ import {
 
 // const TIME_MAP_URL = 'https://api.traveltimeapp.com/v4/time-map'
 const TIME_MAP_URL = 'http://localhost:3001/v4/time-map'
+const intervals = [45, 30, 15]
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function get({ url }) {
@@ -22,19 +24,21 @@ export async function get({ url }) {
 	const travelTime = 45
 
 	const opts = {
-		arrival_searches: origins.map((origin) => ({
-			id: origin.label,
-			coords: geojsonArrayToObject(origin.point),
-			transportation: { type: travelMode },
-			arrival_time: arrivalTime,
-			travel_time: travelTime * 60
-		})),
-		intersections: [
-			{
-				id: 'intersection',
-				search_ids: origins.map((origin) => origin.label)
-			}
-		]
+		arrival_searches: origins.flatMap((origin) =>
+			intervals.map((interval) => ({
+				id: createIsochroneId(origin.label, interval),
+				coords: geojsonArrayToObject(origin.point),
+				transportation: { type: travelMode },
+				arrival_time: arrivalTime,
+				travel_time: travelTime * interval
+			}))
+		),
+		intersections: intervals.map((interval) => ({
+			id: `intersection|${interval}m`,
+			search_ids: origins.map((origin) =>
+				createIsochroneId(origin.label, interval)
+			)
+		}))
 	}
 	const body = JSON.stringify(opts)
 
@@ -50,9 +54,18 @@ export async function get({ url }) {
 	})
 	const data = await response.json()
 	const polygons = data.results.reduce((accum, isochrone) => {
-		accum[isochrone.search_id] = isochroneToPolygon(isochrone)
+		const polygon = isochroneToPolygon(isochrone)
+		if (polygon.flat(3).length > 0) {
+			const [label, interval] = isochrone.search_id.split('|')
+			accum[label] = accum[label] || {}
+			accum[label][interval] = polygon
+		}
 		return accum
 	}, {})
 
 	return { body: { polygons } }
+}
+
+function createIsochroneId(label, travelTime) {
+	return `${slugify(label)}|${travelTime}m`
 }

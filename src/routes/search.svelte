@@ -29,6 +29,11 @@
 		maxNativeZoom: 19,
 		attribution: '© OpenStreetMap contributors'
 	}
+	const intervalColors = {
+		'15m': 'green',
+		'30m': 'yellow',
+		'45m': 'red'
+	}
 
 	let map
 </script>
@@ -37,7 +42,15 @@
 	<LeafletMap bind:this={map} options={mapOptions}>
 		<TileLayer url={tileUrl} options={tileLayerOptions} />
 
-		<Polygon latLngs={polygons.intersection} />
+		{#each Object.entries(polygons.intersection).reverse() as [interval, polygon]}
+			<Polygon
+				latLngs={polygon}
+				fillColor={intervalColors[interval]}
+				color={intervalColors[interval]}
+			>
+				<Popup>{interval}</Popup>
+			</Polygon>
+		{/each}
 
 		{#each points as point, index}
 			<Marker latLng={point}>
