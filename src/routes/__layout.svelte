@@ -1,5 +1,4 @@
 <script lang="ts">
-	import '../app.scss'
 	import Navbar from '$lib/Navbar.svelte'
 </script>
 
@@ -12,7 +11,9 @@
 	</main>
 </div>
 
-<style lang="scss">
+<style lang="scss" global>
+	@import '../app.scss';
+
 	#app {
 		display: grid;
 		grid-template-rows: 52px calc(100vh - 52px);
