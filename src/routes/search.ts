@@ -1,4 +1,5 @@
 import slugify from 'slugify'
+import { inspect } from 'util'
 import {
 	geojsonArrayToObject,
 	isochroneToPolygon,
@@ -21,7 +22,7 @@ export async function get({ url }) {
 	}))
 	const travelMode = url.searchParams.get('travelMode')
 	const arrivalTime = url.searchParams.get('arrivalTime')
-	const travelTime = 45
+	const arrivalTimeRange = 15
 
 	const opts = {
 		arrival_searches: origins.flatMap((origin) =>
@@ -30,7 +31,8 @@ export async function get({ url }) {
 				coords: geojsonArrayToObject(origin.point),
 				transportation: { type: travelMode },
 				arrival_time: arrivalTime,
-				travel_time: travelTime * interval
+				travel_time: interval * 60,
+				range: { enabled: true, width: arrivalTimeRange * 60 }
 			}))
 		),
 		intersections: intervals.map((interval) => ({
@@ -41,6 +43,7 @@ export async function get({ url }) {
 		}))
 	}
 	const body = JSON.stringify(opts)
+	console.log(inspectObj(opts))
 
 	const response = await fetch(TIME_MAP_URL, {
 		method: 'POST',
@@ -68,4 +71,12 @@ export async function get({ url }) {
 
 function createIsochroneId(label, travelTime) {
 	return `${slugify(label)}|${travelTime}m`
+}
+
+function inspectObj(obj) {
+	return inspect(obj, {
+		showHidden: false,
+		depth: 4,
+		colors: true
+	})
 }

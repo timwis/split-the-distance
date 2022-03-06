@@ -16,6 +16,10 @@ export function stringToArray(pointString) {
 	return pointString.split(',').map((item) => +item)
 }
 
+export function stringToObject(pointString) {
+	return geojsonArrayToObject(stringToArray(pointString))
+}
+
 export function stringToLeafletArray(pointString) {
 	return stringToArray(pointString).reverse() // lat, lng for leaflet
 }

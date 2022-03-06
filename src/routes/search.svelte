@@ -9,14 +9,28 @@
 		Marker,
 		Popup
 	} from 'svelte-leafletjs?client'
-	import { stringToLeafletArray } from '$lib/utils/geometry'
+	import {
+		leafletLatLngToString,
+		stringToObject,
+		objectToGeojsonArray
+	} from '$lib/utils/geometry'
 
 	export let polygons
 
-	const points: number[][] = $page.url.searchParams
+	interface Point {
+		lng: number
+		lat: number
+	}
+	const points: Point[] = $page.url.searchParams
 		.getAll('points')
-		.map(stringToLeafletArray)
+		.map(stringToObject)
 	const labels: string[] = $page.url.searchParams.getAll('labels')
+	const origins = points.map((point, index) => ({
+		point,
+		label: labels[index]
+	}))
+	const travelMode = $page.url.searchParams.get('travelMode')
+	const arrivalTime = $page.url.searchParams.get('arrivalTime')
 
 	const mapOptions = {
 		center: points[0],
@@ -36,21 +50,56 @@
 	}
 
 	let map
+	let selectedLocation: Point
+	$: gmapsUrl = selectedLocation
+		? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+				leafletLatLngToString(selectedLocation)
+		  )}`
+		: null
+
+	async function onPopupOpen(event) {
+		selectedLocation = event.detail.popup.getLatLng()
+
+		const opts = {
+			origins,
+			destination: {
+				point: selectedLocation
+			},
+			travelMode,
+			arrivalTime
+		}
+		const body = JSON.stringify(opts)
+		const response = await fetch('/time-filter.json', {
+			method: 'POST',
+			body
+		})
+		const data = await response.json()
+		console.log(data)
+	}
 </script>
 
 {#if browser}
 	<LeafletMap bind:this={map} options={mapOptions}>
 		<TileLayer url={tileUrl} options={tileLayerOptions} />
 
-		{#each Object.entries(polygons.intersection).reverse() as [interval, polygon]}
-			<Polygon
-				latLngs={polygon}
-				fillColor={intervalColors[interval]}
-				color={intervalColors[interval]}
-			>
-				<Popup>{interval}</Popup>
-			</Polygon>
-		{/each}
+		{#if 'intersection' in polygons}
+			{#each Object.entries(polygons.intersection).reverse() as [interval, polygon]}
+				<Polygon
+					latLngs={polygon}
+					fillColor={intervalColors[interval]}
+					color={intervalColors[interval]}
+					events={['popupopen']}
+					on:popupopen={onPopupOpen}
+				>
+					<Popup>
+						<p>You can both reach this location within <b>{interval}</b>.</p>
+						{#if gmapsUrl}
+							<a href={gmapsUrl}>Google Maps</a>
+						{/if}
+					</Popup>
+				</Polygon>
+			{/each}
+		{/if}
 
 		{#each points as point, index}
 			<Marker latLng={point}>
