@@ -1,7 +1,7 @@
 <script lang="ts">
 	import AutoComplete from 'simple-svelte-autocomplete'
 	import mbxClient from '@mapbox/mapbox-sdk'
-	import mbxGeocoding from '@mapbox/mapbox-sdk/services/geocoding'
+	import mbxGeocoding from '@mapbox/mapbox-sdk/services/geocoding.js'
 
 	export let selectedItem = null
 	export let name: string
