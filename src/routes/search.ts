@@ -6,8 +6,8 @@ import {
 	stringToArray
 } from '$lib/utils/geometry'
 
-// const TIME_MAP_URL = 'https://api.traveltimeapp.com/v4/time-map'
-const TIME_MAP_URL = 'http://localhost:3001/v4/time-map'
+const TIME_MAP_URL = 'https://api.traveltimeapp.com/v4/time-map'
+// const TIME_MAP_URL = 'http://localhost:3001/v4/time-map'
 const intervals = [45, 30, 15]
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
