@@ -44,9 +44,9 @@
 		attribution: '© OpenStreetMap contributors'
 	}
 	const intervalColors = {
-		'15m': 'green',
-		'30m': 'yellow',
-		'45m': 'red'
+		'15m': '#36F76A',
+		'30m': '#FFF157',
+		'45m': '#F76363'
 	}
 
 	let map
