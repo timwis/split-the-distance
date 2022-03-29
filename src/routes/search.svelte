@@ -59,22 +59,6 @@
 
 	async function onPopupOpen(event) {
 		selectedLocation = event.detail.popup.getLatLng()
-
-		const opts = {
-			origins,
-			destination: {
-				point: selectedLocation
-			},
-			travelMode,
-			arrivalTime
-		}
-		const body = JSON.stringify(opts)
-		const response = await fetch('/time-filter.json', {
-			method: 'POST',
-			body
-		})
-		const data = await response.json()
-		console.log(data)
 	}
 </script>
 
