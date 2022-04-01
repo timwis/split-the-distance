@@ -72,6 +72,7 @@
 					latLngs={polygon}
 					fillColor={intervalColors[interval]}
 					color={intervalColors[interval]}
+					options={{attribution: 'Powered by <a href="https://docs.traveltime.com/">TravelTime</a>'}}
 					events={['popupopen']}
 					on:popupopen={onPopupOpen}
 				>
