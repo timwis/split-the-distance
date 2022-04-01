@@ -55,6 +55,11 @@ export async function get({ url }) {
 			'X-Api-Key': import.meta.env.VITE_TRAVEL_TIME_API_KEY as string
 		}
 	})
+
+	if (response.status > 400) {
+		return { status: response.status }
+	}
+
 	const data = await response.json()
 	const polygons = data.results.reduce((accum, isochrone) => {
 		const polygon = isochroneToPolygon(isochrone)
