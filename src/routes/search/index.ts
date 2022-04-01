@@ -1,5 +1,6 @@
 import slugify from 'slugify'
 import { inspect } from 'util'
+import Sentry from '$lib/sentry'
 import {
 	geojsonArrayToObject,
 	isochroneToPolygon,
@@ -56,11 +57,14 @@ export async function get({ url }) {
 		}
 	})
 
+	const data = await response.json()
+
 	if (response.status > 400) {
+		console.log(data)
+		Sentry.captureMessage(`timemap request returned status ${response.status}`)
 		return { status: response.status }
 	}
 
-	const data = await response.json()
 	const polygons = data.results.reduce((accum, isochrone) => {
 		const polygon = isochroneToPolygon(isochrone)
 		if (polygon.flat(3).length > 0) {
@@ -82,6 +86,6 @@ function inspectObj(obj) {
 	return inspect(obj, {
 		showHidden: false,
 		depth: 4,
-		colors: true
+		colors: false
 	})
 }
