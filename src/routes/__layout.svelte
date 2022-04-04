@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '$lib/sentry/browser'
 	import Navbar from '$lib/Navbar.svelte'
 </script>
 

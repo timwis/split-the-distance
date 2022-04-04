@@ -34,6 +34,7 @@
 	"dependencies": {
 		"@fortawesome/free-solid-svg-icons": "^5.15.4",
 		"@mapbox/mapbox-sdk": "^0.13.2",
+		"@sentry/browser": "^6.19.3",
 		"@sentry/node": "^6.19.3",
 		"@sentry/tracing": "^6.19.3",
 		"date-fns": "^2.28.0",

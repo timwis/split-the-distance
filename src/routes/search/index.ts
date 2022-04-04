@@ -1,6 +1,6 @@
 import slugify from 'slugify'
 import { inspect } from 'util'
-import Sentry from '$lib/sentry'
+import Sentry from '$lib/sentry/server'
 import {
 	geojsonArrayToObject,
 	isochroneToPolygon,
