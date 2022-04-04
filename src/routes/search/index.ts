@@ -7,8 +7,9 @@ import {
 	stringToArray
 } from '$lib/utils/geometry'
 
-const TIME_MAP_URL = 'https://api.traveltimeapp.com/v4/time-map'
-// const TIME_MAP_URL = 'http://localhost:3001/v4/time-map'
+const BASE_URL =
+	import.meta.env.VITE_TRAVEL_TIME_BASE_URL || 'https://api.traveltimeapp.com'
+const TIME_MAP_URL = new URL('/v4/time-map', BASE_URL).toString()
 const intervals = [45, 30, 15]
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
@@ -52,8 +53,8 @@ export async function get({ url }) {
 		headers: {
 			'Accept-Language': 'en',
 			'Content-Type': 'application/json',
-			'X-Application-Id': import.meta.env.VITE_TRAVEL_TIME_APP_ID as string,
-			'X-Api-Key': import.meta.env.VITE_TRAVEL_TIME_API_KEY as string
+			'X-Application-Id': import.meta.env.VITE_TRAVEL_TIME_APP_ID,
+			'X-Api-Key': import.meta.env.VITE_TRAVEL_TIME_API_KEY
 		}
 	})
 
